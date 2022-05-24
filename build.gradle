@@ -1,0 +1,24 @@
+plugins {
+    id "java"
+    id "application"
+    id "com.github.johnrengelman.shadow" version "5.2.0"
+}
+
+group 'com.github.gregwhitaker'
+version '0.1.0'
+
+sourceCompatibility = 1.8
+mainClassName = 'example.executablejar.Main'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
+
+shadowJar {
+    archivesBaseName = 'example-shadow-app'
+    classifier = ''
+    version = ''
+}
